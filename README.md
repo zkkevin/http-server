@@ -1,2 +1,2 @@
 # http-server
-a simple server implementation
+a simple server implementation by Python.
