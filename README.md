@@ -1,2 +1,3 @@
 # http-server
-a simple server implementation by Python.
+a simple http server implementation by Python.
+
