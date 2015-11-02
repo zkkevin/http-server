@@ -28,10 +28,14 @@ METHODS = ["OPTIONS", "GET", "HEAD", "POST", "PUT", "DELETE", "TRACE", "CONNECT"
 # These methods are the methods that are currently implemented. Any other request will give a 501 error
 IMPLEMENTED_METHODS = ["GET", "HEAD"]
 
+
 class HTTPBadRequest(Exception):
     pass
+
+
 class HTTPConnectionWithException(Exception):
     pass
+
 
 class HTTP_Message:
     """
@@ -82,7 +86,7 @@ class HTTP_Message:
         # Lastly, the HTTP message
         self.body = http_message_line  # Should be blank for requests
 
-    def create_response(self, status, content_type = "text/html"):
+    def create_response(self, status, content_type="text/html"):
         """
         Creates a response HTTP message given a status code name (e.g. "OK")
         """
@@ -93,7 +97,7 @@ class HTTP_Message:
         self.headers["Server"] = "PythonServer/1.0 (Windows 10)"
         self.headers["Date"] = datetime.now().strftime("%a, %d %b %Y %H:%M:%S ") + "EST"  # TODO: get timezone from OS
         self.headers["Content-Length"] = str(len(self.body))
-        self.headers["Content-Type"] =  content_type
+        self.headers["Content-Type"] = content_type
 
     def to_bytestring(self):
         """
