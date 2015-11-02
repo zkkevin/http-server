@@ -10,7 +10,7 @@ import mimetypes
 import logging
 
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 HTTP_VERSION = "HTTP/1.1"
 
